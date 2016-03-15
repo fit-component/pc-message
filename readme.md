@@ -3,5 +3,5 @@
 ---
 
 ````jsx
-npm install fit-message /* or */ fis3 install fit-message 
+npm install fit-message
 ````
