@@ -1,6 +1,6 @@
 {
   "name": "fit-message",
-  "version": "2.0.38",
+  "version": "3.0.0",
   "description": "全局提示",
   "main": "lib/index.js",
   "scripts": {
@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "classnames": "^2.2.1"
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "classnames": "^2.2.3"
   }
 }
