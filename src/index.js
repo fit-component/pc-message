@@ -1,14 +1,15 @@
 import Notice from './notice'
 
-function notice(content, duration = 2, type = 'info', onClose = ()=> {}) {
+function notice(content, duration = 2, type = 'info', onClose = ()=> {
+}) {
     let instance = Notice.newInstance({
         content: content,
-        type: type
+        type   : type
     })
 
     setTimeout(()=> {
         instance.destroy()
-        onClose()
+        onClose && onClose()
     }, duration * 1000)
 }
 
