@@ -1,6 +1,6 @@
 {
   "name": "fit-message",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "全局提示",
   "main": "lib/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "dependencies": {
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
-    "classnames": "^2.2.3",
-    "typings": "lib/index.d.ts"
-  }
+    "classnames": "^2.2.3"
+  },
+  "typings": "lib/index.d.ts"
 }
