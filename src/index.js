@@ -8,7 +8,9 @@ function notice(content, duration = 2, type = 'info', onClose = ()=> {
     })
 
     setTimeout(()=> {
-        instance.destroy()
+        if (instance) {
+            instance.destroy()
+        }
         onClose && onClose()
     }, duration * 1000)
 }
