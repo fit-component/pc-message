@@ -1,10 +1,10 @@
+/// <reference path="../../../../typings/tsd.d.ts" />
 import Notice from './notice'
 
-function notice(content, duration = 2, type = 'info', onClose = ()=> {
-}) {
+function notice(content: string, duration: number = 2, type?: string, onClose?: Function) {
     let instance = Notice.newInstance({
         content: content,
-        type   : type
+        type: type
     })
 
     setTimeout(()=> {
@@ -16,19 +16,19 @@ function notice(content, duration = 2, type = 'info', onClose = ()=> {
 }
 
 export default {
-    info(content, duration, onClose) {
+    info(content: string, duration?: number, onClose?: Function) {
         return notice(content, duration, 'info', onClose)
     },
-    success(content, duration, onClose) {
+    success(content: string, duration?: number, onClose?: Function) {
         return notice(content, duration, 'success', onClose)
     },
-    error(content, duration, onClose) {
+    error(content: string, duration?: number, onClose?: Function) {
         return notice(content, duration, 'error', onClose)
     },
-    warning(content, duration, onClose) {
+    warning(content: string, duration?: number, onClose?: Function) {
         return notice(content, duration, 'warning', onClose)
     },
-    loading(content, duration, onClose) {
+    loading(content: string, duration?: number, onClose?: Function) {
         return notice(content, duration, 'loading', onClose)
     }
 }

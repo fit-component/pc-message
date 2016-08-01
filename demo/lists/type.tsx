@@ -1,25 +1,25 @@
-import React from 'react'
-import Button from 'fit-button'
-import Message from 'fit-message'
+import * as React from 'react'
+import Button from '../../../button/src'
+import Message from '../../src'
 
-export default class Demo extends React.Component {
-    onClick(type) {
+export default class Demo extends React.Component <any,any> {
+    onClick(type: string) {
         switch (type) {
-        case 'info':
-            Message.info('默认', 3, 'info')
-            break
-        case 'success':
-            Message.success('成功', 3, 'success')
-            break
-        case 'error':
-            Message.error('错误', 3, 'error')
-            break
-        case 'warning':
-            Message.warning('警告', 3, 'warning')
-            break
-        case 'loading':
-            Message.loading('加载', 3, 'loading')
-            break
+            case 'info':
+                Message.info('默认', 3)
+                break
+            case 'success':
+                Message.success('成功', 3)
+                break
+            case 'error':
+                Message.error('错误', 3)
+                break
+            case 'warning':
+                Message.warning('警告', 3)
+                break
+            case 'loading':
+                Message.loading('加载', 3)
+                break
         }
     }
 

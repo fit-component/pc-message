@@ -1,12 +1,28 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import classNames from 'classnames'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import * as classNames from 'classnames'
+import * as modules from './module'
 import './index.scss'
 
-export default class Notice extends React.Component {
-    constructor(props) {
+export default class Notice extends React.Component <modules.PropsDefine, modules.StateDefine> {
+    static defaultProps = modules.defaultProps
+
+    static newInstance = (props: modules.PropsDefine) => {
+        const div = document.createElement('div')
+        document.body.appendChild(div)
+        const instance = ReactDOM.render(<Notice {...props}/>, div)
+
+        return {
+            destroy() {
+                ReactDOM.unmountComponentAtNode(div)
+                document.body.removeChild(div)
+            }
+        }
+    }
+
+    constructor(props: modules.PropsDefine) {
         super(props)
-        this.state = {}
+        this.state = modules.defaultState
     }
 
     render() {
@@ -34,18 +50,5 @@ export default class Notice extends React.Component {
                 </div>
             </div>
         )
-    }
-}
-
-Notice.newInstance = (props) => {
-    const div = document.createElement('div')
-    document.body.appendChild(div)
-    const instance = ReactDOM.render(<Notice {...props}/>, div)
-
-    return {
-        destroy() {
-            ReactDOM.unmountComponentAtNode(div)
-            document.body.removeChild(div)
-        }
     }
 }

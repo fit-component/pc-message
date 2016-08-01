@@ -1,8 +1,8 @@
-import React from 'react'
-import Button from 'fit-button'
-import Message from 'fit-message'
+import * as React from 'react'
+import Button from '../../../button/src'
+import Message from '../../src'
 
-export default class Demo extends React.Component {
+export default class Demo extends React.Component <any,any> {
     onClick() {
         Message.info('显示提示', 2, ()=> {
             Message.error('关闭了')
