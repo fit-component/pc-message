@@ -1,6 +1,6 @@
 {
   "name": "fit-message",
-  "version": "3.0.43",
+  "version": "3.0.44",
   "description": "全局提示",
   "main": "lib/index.js",
   "scripts": {
